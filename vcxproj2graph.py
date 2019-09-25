@@ -1,27 +1,60 @@
 import os
 import glob
 import xml.dom.minidom
+import sys
+import re
+import argparse
+
+def convert_file_to_node(filename, base):
+   if filename.lower().startswith(base.lower()):
+      filename = filename[len(base):]
+   if filename.lower().endswith(".vcxproj"):
+      filename = filename[:-8]
+   filename = re.sub('[^0-9a-zA-Z]+', '_', filename)
+   if filename[0].isdigit():
+      filename = '_' + filename
+   return filename
+
+# Check arguments
+parser = argparse.ArgumentParser(description='Generate a dependency graph from Visual Studio solution.')
+parser.add_argument('--path-root', help='Override file root path')
+parser.add_argument('--path-include', help='Override file root path')
+parser.add_argument('--output', help='Output graphviz dot file')
+parser.add_argument('folder', action='store', default='graphviz.dot')
+args = parser.parse_args()
+
+final_folder = args.folder
+final_root = args.path_root
+final_include = args.path_include
+
+if final_folder == None:
+   print("You must specify the root folder of the project.")
+   exit(1)
+
+if final_root == None:
+    final_root = final_folder
+
+if final_include == None:
+    final_include = final_folder
 
 # Get all projects
-files = [f for f in glob.glob("C:\\Sources\\Nagoya\\output\\Washington8x9BackEnd\\build\\" + "**\\*.vcxproj", recursive=True)]
+files = [f for f in glob.glob(final_folder + "/**/*.vcxproj", recursive=True)]
 
-#A = dict([("sape", set()), ("guido", set()), ("jack", set())])
 A = {}
-
-print(A)
 
 # Get all dependencies for all projects
 for f in files:
-   file = f
+   file = convert_file_to_node(f, final_root)
    A[file] = set()
    doc = xml.dom.minidom.parse(f);
    projectReference = doc.getElementsByTagName("ProjectReference")
    for projectDep in projectReference:
       for attrName, attrValue in projectDep.attributes.items():
          if attrName == "Include":
-            A[file].add(attrValue)
+            file_inc = convert_file_to_node(attrValue, final_include)
+            A[file].add(file_inc)
 
-# Remove dependencies if a dependancie depend on it.
+# Remove dependencies if a dependency depend on it.
 i = 0
 for project in A:
 # For keep direct dependencies
@@ -39,13 +72,12 @@ for project in A:
                i = i + 1
    for dep in dependenciesToRemove:
       A[project].remove(dep)
-print (i)
 
 
-f = open("graphivz.txt","w+")
-f.write("digraph D {\r\n")
+f = open(args.output,"w+")
+f.write("digraph D {\n")
 for project in A:
    for dep in A[project]:
-      f.write(dep + "->" + project + "\r\n")
-f.write("}\r\n")
+      f.write(dep + "->" + project + "\n")
+f.write("}\n")
 f.close()
