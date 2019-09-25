@@ -1,0 +1,350 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{4EBF9174-FC13-37B4-843D-887EA994E004}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>pcl_features</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\SourcesHorsgit_server\pcl_debug\bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">pcl_features.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">pcl_features_debug</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\SourcesHorsgit_server\pcl_debug\bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">pcl_features.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">pcl_features_release</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\SourcesHorsgit_server\eigen;C:\SourcesHorsgit_server\flann_install\include;C:\SourcesHorsgit_server\pcl\recognition\include\pcl\recognition\3rdparty;C:\SourcesHorsgit_server\qhull_install\include;C:\SourcesHorsgit_server\boost\boost.install\include\boost-1_71;C:\SourcesHorsgit_server\pcl_debug\include;C:\SourcesHorsgit_server\pcl\common\include;C:\SourcesHorsgit_server\pcl\search\include;C:\SourcesHorsgit_server\pcl\kdtree\include;C:\SourcesHorsgit_server\pcl\octree\include;C:\SourcesHorsgit_server\pcl\filters\include;C:\SourcesHorsgit_server\pcl\2d\include;C:\SourcesHorsgit_server\pcl\features\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <OpenMPSupport>true</OpenMPSupport>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_WIN32_WINNT=0x0A00;BOOST_DISABLE_ASSERTS;EIGEN_NO_DEBUG;BOOST_ALL_NO_LIB;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;NOMINMAX;PCL_ONLY_CORE_POINT_TYPES;qh_QHpointer;qh_QHpointer_dllimport;BOOST_LIB_DIAGNOSTIC;CMAKE_INTDIR="Debug";PCLAPI_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_WIN32_WINNT=0x0A00;BOOST_DISABLE_ASSERTS;EIGEN_NO_DEBUG;BOOST_ALL_NO_LIB;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;NOMINMAX;PCL_ONLY_CORE_POINT_TYPES;qh_QHpointer;qh_QHpointer_dllimport;BOOST_LIB_DIAGNOSTIC;CMAKE_INTDIR=\"Debug\";PCLAPI_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\SourcesHorsgit_server\eigen;C:\SourcesHorsgit_server\flann_install\include;C:\SourcesHorsgit_server\pcl\recognition\include\pcl\recognition\3rdparty;C:\SourcesHorsgit_server\qhull_install\include;C:\SourcesHorsgit_server\boost\boost.install\include\boost-1_71;C:\SourcesHorsgit_server\pcl_debug\include;C:\SourcesHorsgit_server\pcl\common\include;C:\SourcesHorsgit_server\pcl\search\include;C:\SourcesHorsgit_server\pcl\kdtree\include;C:\SourcesHorsgit_server\pcl\octree\include;C:\SourcesHorsgit_server\pcl\filters\include;C:\SourcesHorsgit_server\pcl\2d\include;C:\SourcesHorsgit_server\pcl\features\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\SourcesHorsgit_server\eigen;C:\SourcesHorsgit_server\flann_install\include;C:\SourcesHorsgit_server\pcl\recognition\include\pcl\recognition\3rdparty;C:\SourcesHorsgit_server\qhull_install\include;C:\SourcesHorsgit_server\boost\boost.install\include\boost-1_71;C:\SourcesHorsgit_server\pcl_debug\include;C:\SourcesHorsgit_server\pcl\common\include;C:\SourcesHorsgit_server\pcl\search\include;C:\SourcesHorsgit_server\pcl\kdtree\include;C:\SourcesHorsgit_server\pcl\octree\include;C:\SourcesHorsgit_server\pcl\filters\include;C:\SourcesHorsgit_server\pcl\2d\include;C:\SourcesHorsgit_server\pcl\features\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>C:\SourcesHorsgit_server\boost\boost.install\lib\boost_filesystem-vc141-mt-gd-x64-1_71.lib;C:\SourcesHorsgit_server\boost\boost.install\lib\boost_thread-vc141-mt-gd-x64-1_71.lib;C:\SourcesHorsgit_server\boost\boost.install\lib\boost_date_time-vc141-mt-gd-x64-1_71.lib;C:\SourcesHorsgit_server\boost\boost.install\lib\boost_iostreams-vc141-mt-gd-x64-1_71.lib;C:\SourcesHorsgit_server\boost\boost.install\lib\boost_system-vc141-mt-gd-x64-1_71.lib;C:\SourcesHorsgit_server\boost\boost.install\lib\boost_chrono-vc141-mt-gd-x64-1_71.lib;C:\SourcesHorsgit_server\boost\boost.install\lib\boost_atomic-vc141-mt-gd-x64-1_71.lib;C:\SourcesHorsgit_server\boost\boost.install\lib\boost_regex-vc141-mt-gd-x64-1_71.lib;delayimp.lib;..\lib\pcl_filters_debug.lib;..\lib\pcl_search_debug.lib;..\lib\pcl_kdtree_debug.lib;C:\SourcesHorsgit_server\flann_install\lib\flann_cpp_s.lib;C:\SourcesHorsgit_server\flann_install\lib\flann.lib;C:\SourcesHorsgit_server\flann_install\lib\flann_cpp_s.lib;C:\SourcesHorsgit_server\flann_install\lib\flann.lib;..\lib\pcl_octree_debug.lib;..\lib\pcl_sample_consensus_debug.lib;..\lib\pcl_common_debug.lib;C:\SourcesHorsgit_server\boost\boost.install\lib\boost_filesystem-vc141-mt-gd-x64-1_71.lib;C:\SourcesHorsgit_server\boost\boost.install\lib\boost_thread-vc141-mt-gd-x64-1_71.lib;C:\SourcesHorsgit_server\boost\boost.install\lib\boost_date_time-vc141-mt-gd-x64-1_71.lib;C:\SourcesHorsgit_server\boost\boost.install\lib\boost_iostreams-vc141-mt-gd-x64-1_71.lib;C:\SourcesHorsgit_server\boost\boost.install\lib\boost_system-vc141-mt-gd-x64-1_71.lib;C:\SourcesHorsgit_server\boost\boost.install\lib\boost_chrono-vc141-mt-gd-x64-1_71.lib;C:\SourcesHorsgit_server\boost\boost.install\lib\boost_atomic-vc141-mt-gd-x64-1_71.lib;C:\SourcesHorsgit_server\boost\boost.install\lib\boost_regex-vc141-mt-gd-x64-1_71.lib;delayimp.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:/SourcesHorsgit_server/boost/boost.install/lib;C:/SourcesHorsgit_server/boost/boost.install/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <DelayLoadDLLs>VCOMP140D.dll</DelayLoadDLLs>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/SourcesHorsgit_server/pcl_debug/lib/pcl_features_debug.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/SourcesHorsgit_server/pcl_debug/bin/pcl_features_debug.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\SourcesHorsgit_server\eigen;C:\SourcesHorsgit_server\flann_install\include;C:\SourcesHorsgit_server\pcl\recognition\include\pcl\recognition\3rdparty;C:\SourcesHorsgit_server\qhull_install\include;C:\SourcesHorsgit_server\boost\boost.install\include\boost-1_71;C:\SourcesHorsgit_server\pcl_debug\include;C:\SourcesHorsgit_server\pcl\common\include;C:\SourcesHorsgit_server\pcl\search\include;C:\SourcesHorsgit_server\pcl\kdtree\include;C:\SourcesHorsgit_server\pcl\octree\include;C:\SourcesHorsgit_server\pcl\filters\include;C:\SourcesHorsgit_server\pcl\2d\include;C:\SourcesHorsgit_server\pcl\features\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <OpenMPSupport>true</OpenMPSupport>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_WIN32_WINNT=0x0A00;NDEBUG;BOOST_DISABLE_ASSERTS;EIGEN_NO_DEBUG;BOOST_ALL_NO_LIB;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;NOMINMAX;PCL_ONLY_CORE_POINT_TYPES;qh_QHpointer;qh_QHpointer_dllimport;BOOST_LIB_DIAGNOSTIC;CMAKE_INTDIR="Release";PCLAPI_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_WIN32_WINNT=0x0A00;NDEBUG;BOOST_DISABLE_ASSERTS;EIGEN_NO_DEBUG;BOOST_ALL_NO_LIB;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;NOMINMAX;PCL_ONLY_CORE_POINT_TYPES;qh_QHpointer;qh_QHpointer_dllimport;BOOST_LIB_DIAGNOSTIC;CMAKE_INTDIR=\"Release\";PCLAPI_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\SourcesHorsgit_server\eigen;C:\SourcesHorsgit_server\flann_install\include;C:\SourcesHorsgit_server\pcl\recognition\include\pcl\recognition\3rdparty;C:\SourcesHorsgit_server\qhull_install\include;C:\SourcesHorsgit_server\boost\boost.install\include\boost-1_71;C:\SourcesHorsgit_server\pcl_debug\include;C:\SourcesHorsgit_server\pcl\common\include;C:\SourcesHorsgit_server\pcl\search\include;C:\SourcesHorsgit_server\pcl\kdtree\include;C:\SourcesHorsgit_server\pcl\octree\include;C:\SourcesHorsgit_server\pcl\filters\include;C:\SourcesHorsgit_server\pcl\2d\include;C:\SourcesHorsgit_server\pcl\features\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\SourcesHorsgit_server\eigen;C:\SourcesHorsgit_server\flann_install\include;C:\SourcesHorsgit_server\pcl\recognition\include\pcl\recognition\3rdparty;C:\SourcesHorsgit_server\qhull_install\include;C:\SourcesHorsgit_server\boost\boost.install\include\boost-1_71;C:\SourcesHorsgit_server\pcl_debug\include;C:\SourcesHorsgit_server\pcl\common\include;C:\SourcesHorsgit_server\pcl\search\include;C:\SourcesHorsgit_server\pcl\kdtree\include;C:\SourcesHorsgit_server\pcl\octree\include;C:\SourcesHorsgit_server\pcl\filters\include;C:\SourcesHorsgit_server\pcl\2d\include;C:\SourcesHorsgit_server\pcl\features\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>C:\SourcesHorsgit_server\boost\boost.install\lib\boost_filesystem-vc141-mt-x64-1_71.lib;C:\SourcesHorsgit_server\boost\boost.install\lib\boost_thread-vc141-mt-x64-1_71.lib;C:\SourcesHorsgit_server\boost\boost.install\lib\boost_date_time-vc141-mt-x64-1_71.lib;C:\SourcesHorsgit_server\boost\boost.install\lib\boost_iostreams-vc141-mt-x64-1_71.lib;C:\SourcesHorsgit_server\boost\boost.install\lib\boost_system-vc141-mt-x64-1_71.lib;C:\SourcesHorsgit_server\boost\boost.install\lib\boost_chrono-vc141-mt-x64-1_71.lib;C:\SourcesHorsgit_server\boost\boost.install\lib\boost_atomic-vc141-mt-x64-1_71.lib;C:\SourcesHorsgit_server\boost\boost.install\lib\boost_regex-vc141-mt-x64-1_71.lib;delayimp.lib;..\lib\pcl_filters_release.lib;..\lib\pcl_search_release.lib;..\lib\pcl_kdtree_release.lib;C:\SourcesHorsgit_server\flann_install\lib\flann.lib;C:\SourcesHorsgit_server\flann_install\lib\flann_cpp_s.lib;..\lib\pcl_octree_release.lib;..\lib\pcl_sample_consensus_release.lib;..\lib\pcl_common_release.lib;C:\SourcesHorsgit_server\boost\boost.install\lib\boost_filesystem-vc141-mt-x64-1_71.lib;C:\SourcesHorsgit_server\boost\boost.install\lib\boost_thread-vc141-mt-x64-1_71.lib;C:\SourcesHorsgit_server\boost\boost.install\lib\boost_date_time-vc141-mt-x64-1_71.lib;C:\SourcesHorsgit_server\boost\boost.install\lib\boost_iostreams-vc141-mt-x64-1_71.lib;C:\SourcesHorsgit_server\boost\boost.install\lib\boost_system-vc141-mt-x64-1_71.lib;C:\SourcesHorsgit_server\boost\boost.install\lib\boost_chrono-vc141-mt-x64-1_71.lib;C:\SourcesHorsgit_server\boost\boost.install\lib\boost_atomic-vc141-mt-x64-1_71.lib;C:\SourcesHorsgit_server\boost\boost.install\lib\boost_regex-vc141-mt-x64-1_71.lib;delayimp.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:/SourcesHorsgit_server/boost/boost.install/lib;C:/SourcesHorsgit_server/boost/boost.install/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <DelayLoadDLLs>VCOMP140.dll</DelayLoadDLLs>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/SourcesHorsgit_server/pcl_debug/lib/pcl_features_release.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/SourcesHorsgit_server/pcl_debug/bin/pcl_features_release.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\SourcesHorsgit_server\pcl\features\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/SourcesHorsgit_server/pcl/features/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/SourcesHorsgit_server/pcl -BC:/SourcesHorsgit_server/pcl_debug --check-stamp-file C:/SourcesHorsgit_server/pcl_debug/features/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/SourcesHorsgit_server/pcl/features/CMakeLists.txt;C:\SourcesHorsgit_server\pcl\features\CMakeLists.txt;C:\SourcesHorsgit_server\pcl\cmake\pkgconfig.cmake.in;C:\SourcesHorsgit_server\pcl\features\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\SourcesHorsgit_server\pcl_debug\features\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/SourcesHorsgit_server/pcl/features/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/SourcesHorsgit_server/pcl -BC:/SourcesHorsgit_server/pcl_debug --check-stamp-file C:/SourcesHorsgit_server/pcl_debug/features/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/SourcesHorsgit_server/pcl/features/CMakeLists.txt;C:\SourcesHorsgit_server\pcl\features\CMakeLists.txt;C:\SourcesHorsgit_server\pcl\cmake\pkgconfig.cmake.in;C:\SourcesHorsgit_server\pcl\features\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\SourcesHorsgit_server\pcl_debug\features\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C:\SourcesHorsgit_server\pcl\features\src\board.cpp"  />
+    <ClCompile Include="C:\SourcesHorsgit_server\pcl\features\src\flare.cpp"  />
+    <ClCompile Include="C:\SourcesHorsgit_server\pcl\features\src\brisk_2d.cpp"  />
+    <ClCompile Include="C:\SourcesHorsgit_server\pcl\features\src\boundary.cpp"  />
+    <ClCompile Include="C:\SourcesHorsgit_server\pcl\features\src\cppf.cpp"  />
+    <ClCompile Include="C:\SourcesHorsgit_server\pcl\features\src\cvfh.cpp"  />
+    <ClCompile Include="C:\SourcesHorsgit_server\pcl\features\src\our_cvfh.cpp"  />
+    <ClCompile Include="C:\SourcesHorsgit_server\pcl\features\src\crh.cpp"  />
+    <ClCompile Include="C:\SourcesHorsgit_server\pcl\features\src\don.cpp"  />
+    <ClCompile Include="C:\SourcesHorsgit_server\pcl\features\src\fpfh.cpp"  />
+    <ClCompile Include="C:\SourcesHorsgit_server\pcl\features\src\gasd.cpp"  />
+    <ClCompile Include="C:\SourcesHorsgit_server\pcl\features\src\gfpfh.cpp"  />
+    <ClCompile Include="C:\SourcesHorsgit_server\pcl\features\src\integral_image_normal.cpp"  />
+    <ClCompile Include="C:\SourcesHorsgit_server\pcl\features\src\intensity_gradient.cpp"  />
+    <ClCompile Include="C:\SourcesHorsgit_server\pcl\features\src\intensity_spin.cpp"  />
+    <ClCompile Include="C:\SourcesHorsgit_server\pcl\features\src\linear_least_squares_normal.cpp"  />
+    <ClCompile Include="C:\SourcesHorsgit_server\pcl\features\src\moment_invariants.cpp"  />
+    <ClCompile Include="C:\SourcesHorsgit_server\pcl\features\src\moment_of_inertia_estimation.cpp"  />
+    <ClCompile Include="C:\SourcesHorsgit_server\pcl\features\src\multiscale_feature_persistence.cpp"  />
+    <ClCompile Include="C:\SourcesHorsgit_server\pcl\features\src\narf.cpp"  />
+    <ClCompile Include="C:\SourcesHorsgit_server\pcl\features\src\normal_3d.cpp"  />
+    <ClCompile Include="C:\SourcesHorsgit_server\pcl\features\src\normal_based_signature.cpp"  />
+    <ClCompile Include="C:\SourcesHorsgit_server\pcl\features\src\organized_edge_detection.cpp"  />
+    <ClCompile Include="C:\SourcesHorsgit_server\pcl\features\src\pfh.cpp"  />
+    <ClCompile Include="C:\SourcesHorsgit_server\pcl\features\src\ppf.cpp"  />
+    <ClCompile Include="C:\SourcesHorsgit_server\pcl\features\src\shot.cpp"  />
+    <ClCompile Include="C:\SourcesHorsgit_server\pcl\features\src\shot_lrf.cpp"  />
+    <ClCompile Include="C:\SourcesHorsgit_server\pcl\features\src\spin_image.cpp"  />
+    <ClCompile Include="C:\SourcesHorsgit_server\pcl\features\src\principal_curvatures.cpp"  />
+    <ClCompile Include="C:\SourcesHorsgit_server\pcl\features\src\rift.cpp"  />
+    <ClCompile Include="C:\SourcesHorsgit_server\pcl\features\src\rops_estimation.cpp"  />
+    <ClCompile Include="C:\SourcesHorsgit_server\pcl\features\src\rsd.cpp"  />
+    <ClCompile Include="C:\SourcesHorsgit_server\pcl\features\src\grsd.cpp"  />
+    <ClCompile Include="C:\SourcesHorsgit_server\pcl\features\src\statistical_multiscale_interest_region_extraction.cpp"  />
+    <ClCompile Include="C:\SourcesHorsgit_server\pcl\features\src\vfh.cpp"  />
+    <ClCompile Include="C:\SourcesHorsgit_server\pcl\features\src\esf.cpp"  />
+    <ClCompile Include="C:\SourcesHorsgit_server\pcl\features\src\3dsc.cpp"  />
+    <ClCompile Include="C:\SourcesHorsgit_server\pcl\features\src\usc.cpp"  />
+    <ClCompile Include="C:\SourcesHorsgit_server\pcl\features\src\range_image_border_extractor.cpp"  />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\boost.h" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\eigen.h" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\board.h" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\flare.h" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\brisk_2d.h" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\cppf.h" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\cvfh.h" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\our_cvfh.h" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\crh.h" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\don.h" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\feature.h" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\fpfh.h" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\fpfh_omp.h" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\from_meshes.h" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\gasd.h" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\gfpfh.h" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\integral_image2D.h" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\integral_image_normal.h" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\intensity_gradient.h" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\intensity_spin.h" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\linear_least_squares_normal.h" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\moment_invariants.h" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\moment_of_inertia_estimation.h" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\multiscale_feature_persistence.h" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\narf.h" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\narf_descriptor.h" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\normal_3d.h" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\normal_3d_omp.h" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\normal_based_signature.h" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\organized_edge_detection.h" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\pfh.h" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\pfh_tools.h" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\pfhrgb.h" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\ppf.h" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\ppfrgb.h" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\shot.h" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\shot_lrf.h" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\shot_lrf_omp.h" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\shot_omp.h" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\spin_image.h" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\principal_curvatures.h" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\rift.h" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\rops_estimation.h" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\rsd.h" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\grsd.h" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\statistical_multiscale_interest_region_extraction.h" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\vfh.h" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\esf.h" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\3dsc.h" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\usc.h" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\boundary.h" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\range_image_border_extractor.h" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\impl\board.hpp" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\impl\flare.hpp" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\impl\brisk_2d.hpp" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\impl\cppf.hpp" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\impl\cvfh.hpp" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\impl\our_cvfh.hpp" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\impl\crh.hpp" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\impl\don.hpp" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\impl\feature.hpp" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\impl\fpfh.hpp" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\impl\fpfh_omp.hpp" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\impl\gasd.hpp" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\impl\gfpfh.hpp" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\impl\integral_image2D.hpp" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\impl\integral_image_normal.hpp" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\impl\intensity_gradient.hpp" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\impl\intensity_spin.hpp" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\impl\linear_least_squares_normal.hpp" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\impl\moment_invariants.hpp" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\impl\moment_of_inertia_estimation.hpp" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\impl\multiscale_feature_persistence.hpp" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\impl\narf.hpp" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\impl\normal_3d.hpp" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\impl\normal_3d_omp.hpp" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\impl\normal_based_signature.hpp" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\impl\organized_edge_detection.hpp" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\impl\pfh.hpp" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\impl\pfhrgb.hpp" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\impl\ppf.hpp" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\impl\ppfrgb.hpp" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\impl\shot.hpp" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\impl\shot_lrf.hpp" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\impl\shot_lrf_omp.hpp" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\impl\shot_omp.hpp" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\impl\spin_image.hpp" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\impl\principal_curvatures.hpp" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\impl\rift.hpp" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\impl\rops_estimation.hpp" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\impl\rsd.hpp" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\impl\grsd.hpp" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\impl\statistical_multiscale_interest_region_extraction.hpp" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\impl\vfh.hpp" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\impl\esf.hpp" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\impl\3dsc.hpp" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\impl\usc.hpp" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\impl\boundary.hpp" />
+    <ClInclude Include="C:\SourcesHorsgit_server\pcl\features\include\pcl\features\impl\range_image_border_extractor.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\SourcesHorsgit_server\pcl_debug\ZERO_CHECK.vcxproj">
+      <Project>{0AC9BB98-6536-3BAD-9CDC-5438F17C0D4C}</Project>
+      <Name>ZERO_CHECK</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SourcesHorsgit_server\pcl_debug\common\pcl_common.vcxproj">
+      <Project>{762AD535-B11D-3A43-AD09-47A62BBE4195}</Project>
+      <Name>pcl_common</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SourcesHorsgit_server\pcl_debug\filters\pcl_filters.vcxproj">
+      <Project>{4113B867-1C6C-3034-A770-A7E710E6BA50}</Project>
+      <Name>pcl_filters</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SourcesHorsgit_server\pcl_debug\kdtree\pcl_kdtree.vcxproj">
+      <Project>{E0040594-244A-325B-9934-68FBC16499AA}</Project>
+      <Name>pcl_kdtree</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SourcesHorsgit_server\pcl_debug\octree\pcl_octree.vcxproj">
+      <Project>{759FECC9-B0C0-3647-A21F-72B1FDB37469}</Project>
+      <Name>pcl_octree</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SourcesHorsgit_server\pcl_debug\sample_consensus\pcl_sample_consensus.vcxproj">
+      <Project>{0C8FDB6F-149B-329E-9C8F-860F6AE279D6}</Project>
+      <Name>pcl_sample_consensus</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SourcesHorsgit_server\pcl_debug\search\pcl_search.vcxproj">
+      <Project>{D8D58263-F8FA-32B9-981A-7734FCD0E091}</Project>
+      <Name>pcl_search</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

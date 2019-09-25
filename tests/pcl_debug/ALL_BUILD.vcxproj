@@ -1,0 +1,409 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{E2550876-815C-37FC-ABE4-C816CBBE9CE9}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\SourcesHorsgit_server\eigen;C:\SourcesHorsgit_server\flann_install\include;C:\SourcesHorsgit_server\pcl\recognition\include\pcl\recognition\3rdparty;C:\SourcesHorsgit_server\qhull_install\include;C:\SourcesHorsgit_server\boost\boost.install\include\boost-1_71;C:\SourcesHorsgit_server\pcl_debug\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\SourcesHorsgit_server\eigen;C:\SourcesHorsgit_server\flann_install\include;C:\SourcesHorsgit_server\pcl\recognition\include\pcl\recognition\3rdparty;C:\SourcesHorsgit_server\qhull_install\include;C:\SourcesHorsgit_server\boost\boost.install\include\boost-1_71;C:\SourcesHorsgit_server\pcl_debug\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\SourcesHorsgit_server\pcl\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/SourcesHorsgit_server/pcl/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/SourcesHorsgit_server/pcl -BC:/SourcesHorsgit_server/pcl_debug --check-stamp-file C:/SourcesHorsgit_server/pcl_debug/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/SourcesHorsgit_server/pcl/CMakeLists.txt;C:\SourcesHorsgit_server\pcl\CMakeLists.txt;C:\SourcesHorsgit_server\pcl_debug\CMakeFiles\3.10.2\CMakeSystem.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeSystemSpecificInitialize.cmake;C:\SourcesHorsgit_server\pcl_debug\CMakeFiles\3.10.2\CMakeCCompiler.cmake;C:\SourcesHorsgit_server\pcl_debug\CMakeFiles\3.10.2\CMakeCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC.cmake;C:\SourcesHorsgit_server\pcl_debug\CMakeFiles\3.10.2\CMakeRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPkgConfig.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\SourcesHorsgit_server\pcl\cmake\pcl_verbosity.cmake;C:\SourcesHorsgit_server\pcl\cmake\pcl_targets.cmake;C:\SourcesHorsgit_server\pcl\cmake\pcl_utils.cmake;C:\SourcesHorsgit_server\pcl\cmake\CMakeParseArguments.cmake;C:\SourcesHorsgit_server\pcl\cmake\pcl_options.cmake;C:\SourcesHorsgit_server\pcl\cmake\pcl_find_sse.cmake;C:\SourcesHorsgit_server\pcl\cmake\pcl_utils.cmake;C:\SourcesHorsgit_server\pcl\cmake\CMakeParseArguments.cmake;C:\SourcesHorsgit_server\pcl\cmake\uninstall_target.cmake.in;C:\Program Files\CMake\share\cmake-3.10\Modules\FindOpenMP.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\SourcesHorsgit_server\pcl\cmake\Modules\FindEigen.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPkgConfig.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\SourcesHorsgit_server\pcl\cmake\Modules\FindFLANN.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPkgConfig.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPNG.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindZLIB.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\SelectLibraryConfigurations.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\SourcesHorsgit_server\pcl\cmake\Modules\FindQhull.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\SourcesHorsgit_server\pcl\cmake\pcl_find_boost.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindBoost.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindBoost.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckSymbolExists.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\SourcesHorsgit_server\pcl\pcl_config.h.in;C:\SourcesHorsgit_server\pcl\cmake\pcl_targets.cmake;C:\SourcesHorsgit_server\pcl\cmake\pcl_utils.cmake;C:\SourcesHorsgit_server\pcl\cmake\CMakeParseArguments.cmake;C:\SourcesHorsgit_server\pcl\cmake\pcl_pclconfig.cmake;C:\SourcesHorsgit_server\pcl\PCLConfig.cmake.in;C:\SourcesHorsgit_server\pcl\PCLConfigVersion.cmake.in;C:\SourcesHorsgit_server\pcl\cmake\pcl_all_in_one_installer.cmake;C:\SourcesHorsgit_server\pcl\cmake\pcl_cpack.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\InstallRequiredSystemLibraries.cmake;C:\SourcesHorsgit_server\pcl\cmake\cpack_options.cmake.in;C:\Program Files\CMake\share\cmake-3.10\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-3.10\Templates\CPackConfig.cmake.in;C:\Program Files\CMake\share\cmake-3.10\Templates\CPackConfig.cmake.in;C:\SourcesHorsgit_server\pcl\cmake\dep_graph.cmake;C:\SourcesHorsgit_server\pcl\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\SourcesHorsgit_server\pcl_debug\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/SourcesHorsgit_server/pcl/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/SourcesHorsgit_server/pcl -BC:/SourcesHorsgit_server/pcl_debug --check-stamp-file C:/SourcesHorsgit_server/pcl_debug/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/SourcesHorsgit_server/pcl/CMakeLists.txt;C:\SourcesHorsgit_server\pcl\CMakeLists.txt;C:\SourcesHorsgit_server\pcl_debug\CMakeFiles\3.10.2\CMakeSystem.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeSystemSpecificInitialize.cmake;C:\SourcesHorsgit_server\pcl_debug\CMakeFiles\3.10.2\CMakeCCompiler.cmake;C:\SourcesHorsgit_server\pcl_debug\CMakeFiles\3.10.2\CMakeCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC.cmake;C:\SourcesHorsgit_server\pcl_debug\CMakeFiles\3.10.2\CMakeRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPkgConfig.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\SourcesHorsgit_server\pcl\cmake\pcl_verbosity.cmake;C:\SourcesHorsgit_server\pcl\cmake\pcl_targets.cmake;C:\SourcesHorsgit_server\pcl\cmake\pcl_utils.cmake;C:\SourcesHorsgit_server\pcl\cmake\CMakeParseArguments.cmake;C:\SourcesHorsgit_server\pcl\cmake\pcl_options.cmake;C:\SourcesHorsgit_server\pcl\cmake\pcl_find_sse.cmake;C:\SourcesHorsgit_server\pcl\cmake\pcl_utils.cmake;C:\SourcesHorsgit_server\pcl\cmake\CMakeParseArguments.cmake;C:\SourcesHorsgit_server\pcl\cmake\uninstall_target.cmake.in;C:\Program Files\CMake\share\cmake-3.10\Modules\FindOpenMP.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\SourcesHorsgit_server\pcl\cmake\Modules\FindEigen.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPkgConfig.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\SourcesHorsgit_server\pcl\cmake\Modules\FindFLANN.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPkgConfig.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPNG.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindZLIB.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\SelectLibraryConfigurations.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\SourcesHorsgit_server\pcl\cmake\Modules\FindQhull.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\SourcesHorsgit_server\pcl\cmake\pcl_find_boost.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindBoost.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindBoost.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckSymbolExists.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\FindPackageMessage.cmake;C:\SourcesHorsgit_server\pcl\pcl_config.h.in;C:\SourcesHorsgit_server\pcl\cmake\pcl_targets.cmake;C:\SourcesHorsgit_server\pcl\cmake\pcl_utils.cmake;C:\SourcesHorsgit_server\pcl\cmake\CMakeParseArguments.cmake;C:\SourcesHorsgit_server\pcl\cmake\pcl_pclconfig.cmake;C:\SourcesHorsgit_server\pcl\PCLConfig.cmake.in;C:\SourcesHorsgit_server\pcl\PCLConfigVersion.cmake.in;C:\SourcesHorsgit_server\pcl\cmake\pcl_all_in_one_installer.cmake;C:\SourcesHorsgit_server\pcl\cmake\pcl_cpack.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\InstallRequiredSystemLibraries.cmake;C:\SourcesHorsgit_server\pcl\cmake\cpack_options.cmake.in;C:\Program Files\CMake\share\cmake-3.10\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-3.10\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-3.10\Templates\CPackConfig.cmake.in;C:\Program Files\CMake\share\cmake-3.10\Templates\CPackConfig.cmake.in;C:\SourcesHorsgit_server\pcl\cmake\dep_graph.cmake;C:\SourcesHorsgit_server\pcl\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\SourcesHorsgit_server\pcl_debug\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\SourcesHorsgit_server\pcl_debug\ZERO_CHECK.vcxproj">
+      <Project>{0AC9BB98-6536-3BAD-9CDC-5438F17C0D4C}</Project>
+      <Name>ZERO_CHECK</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SourcesHorsgit_server\pcl_debug\tools\pcl_add_gaussian_noise.vcxproj">
+      <Project>{AE426BD2-A140-3B16-A472-08B43781E25F}</Project>
+      <Name>pcl_add_gaussian_noise</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SourcesHorsgit_server\pcl_debug\tools\pcl_boundary_estimation.vcxproj">
+      <Project>{B035B08D-4267-3F9E-AC83-D08B0237C13C}</Project>
+      <Name>pcl_boundary_estimation</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SourcesHorsgit_server\pcl_debug\tools\pcl_cluster_extraction.vcxproj">
+      <Project>{84937200-8930-30B7-ADDE-517DDA74EE9D}</Project>
+      <Name>pcl_cluster_extraction</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SourcesHorsgit_server\pcl_debug\common\pcl_common.vcxproj">
+      <Project>{762AD535-B11D-3A43-AD09-47A62BBE4195}</Project>
+      <Name>pcl_common</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SourcesHorsgit_server\pcl_debug\tools\pcl_compute_cloud_error.vcxproj">
+      <Project>{52E0C730-1D39-3568-8C9E-25729F095632}</Project>
+      <Name>pcl_compute_cloud_error</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SourcesHorsgit_server\pcl_debug\tools\pcl_compute_hausdorff.vcxproj">
+      <Project>{7D39410F-2313-39D3-9A53-AD546EDDFD20}</Project>
+      <Name>pcl_compute_hausdorff</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SourcesHorsgit_server\pcl_debug\tools\pcl_compute_hull.vcxproj">
+      <Project>{BC035621-16A6-34CD-A04F-CBE9FED9FF38}</Project>
+      <Name>pcl_compute_hull</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SourcesHorsgit_server\pcl_debug\tools\pcl_concatenate_points_pcd.vcxproj">
+      <Project>{48B0EBAA-407F-3645-BF30-8008A1A44096}</Project>
+      <Name>pcl_concatenate_points_pcd</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SourcesHorsgit_server\pcl_debug\io\tools\pcl_convert_pcd_ascii_binary.vcxproj">
+      <Project>{080E0CB9-D15D-3F19-ADE9-110974A7095A}</Project>
+      <Name>pcl_convert_pcd_ascii_binary</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SourcesHorsgit_server\pcl_debug\tools\pcl_crf_segmentation.vcxproj">
+      <Project>{2EEDE7AA-5447-3203-BED1-A441E582B82A}</Project>
+      <Name>pcl_crf_segmentation</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SourcesHorsgit_server\pcl_debug\tools\pcl_crop_to_hull.vcxproj">
+      <Project>{86BAF4D5-09BF-336F-BE24-E201E73C7310}</Project>
+      <Name>pcl_crop_to_hull</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SourcesHorsgit_server\pcl_debug\tools\pcl_demean_cloud.vcxproj">
+      <Project>{E6EB43C5-3FFA-3CD5-A972-3BBD79CC0390}</Project>
+      <Name>pcl_demean_cloud</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SourcesHorsgit_server\pcl_debug\tools\pcl_elch.vcxproj">
+      <Project>{18CD6226-0CAF-3F6C-A1B6-4DD1B9C77F14}</Project>
+      <Name>pcl_elch</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SourcesHorsgit_server\pcl_debug\tools\pcl_extract_feature.vcxproj">
+      <Project>{0BC7C63E-DE89-38CE-8032-E305A84FD906}</Project>
+      <Name>pcl_extract_feature</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SourcesHorsgit_server\pcl_debug\tools\pcl_fast_bilateral_filter.vcxproj">
+      <Project>{8B6960F0-4C64-3DF9-81DB-777C68CA79C3}</Project>
+      <Name>pcl_fast_bilateral_filter</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SourcesHorsgit_server\pcl_debug\features\pcl_features.vcxproj">
+      <Project>{4EBF9174-FC13-37B4-843D-887EA994E004}</Project>
+      <Name>pcl_features</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SourcesHorsgit_server\pcl_debug\filters\pcl_filters.vcxproj">
+      <Project>{4113B867-1C6C-3034-A770-A7E710E6BA50}</Project>
+      <Name>pcl_filters</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SourcesHorsgit_server\pcl_debug\tools\pcl_fpfh_estimation.vcxproj">
+      <Project>{EC1881CE-09AB-38FA-B910-D5A4FB981731}</Project>
+      <Name>pcl_fpfh_estimation</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SourcesHorsgit_server\pcl_debug\tools\pcl_generate.vcxproj">
+      <Project>{47749FFE-31A0-3CAB-994A-747665C28D80}</Project>
+      <Name>pcl_generate</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SourcesHorsgit_server\pcl_debug\tools\pcl_gp3_surface.vcxproj">
+      <Project>{3AF1D5D0-5CBE-3CAA-BD5D-9C9954548B4A}</Project>
+      <Name>pcl_gp3_surface</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SourcesHorsgit_server\pcl_debug\tools\pcl_grid_min.vcxproj">
+      <Project>{ECED4B3B-5CFC-367F-937B-81D682B24933}</Project>
+      <Name>pcl_grid_min</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SourcesHorsgit_server\pcl_debug\io\tools\pcl_hdl_grabber.vcxproj">
+      <Project>{EE2ED153-5461-3912-97D2-9FDBA1420221}</Project>
+      <Name>pcl_hdl_grabber</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SourcesHorsgit_server\pcl_debug\tools\pcl_icp.vcxproj">
+      <Project>{F8415229-65E7-3999-BB81-AA9F8744CF98}</Project>
+      <Name>pcl_icp</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SourcesHorsgit_server\pcl_debug\tools\pcl_icp2d.vcxproj">
+      <Project>{D45E35B6-E199-36E7-8D0A-D498B1F33EBF}</Project>
+      <Name>pcl_icp2d</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SourcesHorsgit_server\pcl_debug\io\pcl_io.vcxproj">
+      <Project>{ACE44983-26F1-34A8-8B7F-4ADBF7A0DF0B}</Project>
+      <Name>pcl_io</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SourcesHorsgit_server\pcl_debug\io\pcl_io_ply.vcxproj">
+      <Project>{BB550020-71E7-3325-8B6A-ACFA42793BAD}</Project>
+      <Name>pcl_io_ply</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SourcesHorsgit_server\pcl_debug\kdtree\pcl_kdtree.vcxproj">
+      <Project>{E0040594-244A-325B-9934-68FBC16499AA}</Project>
+      <Name>pcl_kdtree</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SourcesHorsgit_server\pcl_debug\keypoints\pcl_keypoints.vcxproj">
+      <Project>{39722348-56EE-30AE-8EAB-6882BDCF2AB2}</Project>
+      <Name>pcl_keypoints</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SourcesHorsgit_server\pcl_debug\tools\pcl_linemod_detection.vcxproj">
+      <Project>{5FA7D2B2-3FA8-33F9-87CB-51431F23BB7E}</Project>
+      <Name>pcl_linemod_detection</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SourcesHorsgit_server\pcl_debug\tools\pcl_local_max.vcxproj">
+      <Project>{E56113C1-7A4F-3842-BB9F-F3EA365DBBC4}</Project>
+      <Name>pcl_local_max</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SourcesHorsgit_server\pcl_debug\tools\pcl_lum.vcxproj">
+      <Project>{082B5968-CFCA-3E7C-B212-A269A54B2AD4}</Project>
+      <Name>pcl_lum</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SourcesHorsgit_server\pcl_debug\tools\pcl_marching_cubes_reconstruction.vcxproj">
+      <Project>{CADED2A8-F589-3DC8-B7EA-8E7DD9DE81F5}</Project>
+      <Name>pcl_marching_cubes_reconstruction</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SourcesHorsgit_server\pcl_debug\tools\pcl_match_linemod_template.vcxproj">
+      <Project>{5180946A-13AC-37E4-AE09-5E959FF5A02D}</Project>
+      <Name>pcl_match_linemod_template</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SourcesHorsgit_server\pcl_debug\ml\pcl_ml.vcxproj">
+      <Project>{17A2E8F8-125D-310E-8D2C-609EB4346940}</Project>
+      <Name>pcl_ml</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SourcesHorsgit_server\pcl_debug\tools\pcl_mls_smoothing.vcxproj">
+      <Project>{ACC6F883-6773-3DD9-ACE6-C073A2DF871A}</Project>
+      <Name>pcl_mls_smoothing</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SourcesHorsgit_server\pcl_debug\tools\pcl_morph.vcxproj">
+      <Project>{9063E817-1AE9-37CD-8AEA-C98DB2EA1E6C}</Project>
+      <Name>pcl_morph</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SourcesHorsgit_server\pcl_debug\tools\pcl_ndt2d.vcxproj">
+      <Project>{0FC37E30-7799-352F-9994-71F43DAE6D38}</Project>
+      <Name>pcl_ndt2d</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SourcesHorsgit_server\pcl_debug\tools\pcl_ndt3d.vcxproj">
+      <Project>{306F09C1-F804-3055-BBBD-636FAED87E0B}</Project>
+      <Name>pcl_ndt3d</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SourcesHorsgit_server\pcl_debug\tools\pcl_normal_estimation.vcxproj">
+      <Project>{2DFB6784-6D80-3C8C-9B66-5AD7863B8429}</Project>
+      <Name>pcl_normal_estimation</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SourcesHorsgit_server\pcl_debug\octree\pcl_octree.vcxproj">
+      <Project>{759FECC9-B0C0-3647-A21F-72B1FDB37469}</Project>
+      <Name>pcl_octree</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SourcesHorsgit_server\pcl_debug\tools\pcl_outlier_removal.vcxproj">
+      <Project>{0BFD1F1C-3E38-313F-9333-3238FE35CDDB}</Project>
+      <Name>pcl_outlier_removal</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SourcesHorsgit_server\pcl_debug\tools\pcl_passthrough_filter.vcxproj">
+      <Project>{E7DEE572-5B12-3B95-9239-0CBF4712B393}</Project>
+      <Name>pcl_passthrough_filter</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SourcesHorsgit_server\pcl_debug\tools\pcl_pcd2ply.vcxproj">
+      <Project>{BDB9EE72-ACD7-3913-9D43-E42423007A34}</Project>
+      <Name>pcl_pcd2ply</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SourcesHorsgit_server\pcl_debug\tools\pcl_pcd2vtk.vcxproj">
+      <Project>{E123C8B9-3085-3783-9137-663EBB9573E5}</Project>
+      <Name>pcl_pcd2vtk</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SourcesHorsgit_server\pcl_debug\tools\pcl_pcd_change_viewpoint.vcxproj">
+      <Project>{02B0F917-FE6A-3F1D-8EE5-F42D5CCFE918}</Project>
+      <Name>pcl_pcd_change_viewpoint</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SourcesHorsgit_server\pcl_debug\io\tools\pcl_pcd_convert_NaN_nan.vcxproj">
+      <Project>{3CA1B38F-A6D9-3805-B0A2-4E8B645A4035}</Project>
+      <Name>pcl_pcd_convert_NaN_nan</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SourcesHorsgit_server\pcl_debug\io\tools\pcl_pcd_introduce_nan.vcxproj">
+      <Project>{8817E825-FEE6-3908-9EC4-2A7722A3F353}</Project>
+      <Name>pcl_pcd_introduce_nan</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SourcesHorsgit_server\pcl_debug\tools\pcl_pclzf2pcd.vcxproj">
+      <Project>{414370E6-25DB-3197-8C03-0E7DC5C810E4}</Project>
+      <Name>pcl_pclzf2pcd</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SourcesHorsgit_server\pcl_debug\tools\pcl_plane_projection.vcxproj">
+      <Project>{65E0CA99-B644-374A-862F-873F93A18E66}</Project>
+      <Name>pcl_plane_projection</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SourcesHorsgit_server\pcl_debug\io\tools\ply\pcl_ply2obj.vcxproj">
+      <Project>{CF1577BF-E6A6-3C0D-A1ED-A20A51A38A8E}</Project>
+      <Name>pcl_ply2obj</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SourcesHorsgit_server\pcl_debug\tools\pcl_ply2pcd.vcxproj">
+      <Project>{83CAD979-F339-3A4F-A846-3ED49CC126C6}</Project>
+      <Name>pcl_ply2pcd</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SourcesHorsgit_server\pcl_debug\io\tools\ply\pcl_ply2ply.vcxproj">
+      <Project>{E5A8974E-DA92-3E30-BCC9-55D339494A24}</Project>
+      <Name>pcl_ply2ply</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SourcesHorsgit_server\pcl_debug\io\tools\ply\pcl_ply2raw.vcxproj">
+      <Project>{C5500A2F-3C49-3FA8-BB48-C985E0DB3155}</Project>
+      <Name>pcl_ply2raw</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SourcesHorsgit_server\pcl_debug\io\tools\ply\pcl_plyheader.vcxproj">
+      <Project>{BF913F57-DAA5-33D2-8C77-25BBF227012C}</Project>
+      <Name>pcl_plyheader</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SourcesHorsgit_server\pcl_debug\tools\pcl_poisson_reconstruction.vcxproj">
+      <Project>{358FE0D4-46C3-314C-9738-30647DFAB0D7}</Project>
+      <Name>pcl_poisson_reconstruction</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SourcesHorsgit_server\pcl_debug\tools\pcl_progressive_morphological_filter.vcxproj">
+      <Project>{CF8483E0-15A8-3354-9749-5E46861B2EA3}</Project>
+      <Name>pcl_progressive_morphological_filter</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SourcesHorsgit_server\pcl_debug\tools\pcl_radius_filter.vcxproj">
+      <Project>{43E7DAA4-1CA2-3F4A-8DDE-B74EEF5DE01F}</Project>
+      <Name>pcl_radius_filter</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SourcesHorsgit_server\pcl_debug\recognition\pcl_recognition.vcxproj">
+      <Project>{45096AB8-E051-304D-86B7-C4F093AB3FFA}</Project>
+      <Name>pcl_recognition</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SourcesHorsgit_server\pcl_debug\registration\pcl_registration.vcxproj">
+      <Project>{60D0D9CE-99E7-35E1-9A78-C5312C76A335}</Project>
+      <Name>pcl_registration</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SourcesHorsgit_server\pcl_debug\tools\pcl_sac_segmentation_plane.vcxproj">
+      <Project>{71E9B359-788B-39F6-A78A-B87293DD49A5}</Project>
+      <Name>pcl_sac_segmentation_plane</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SourcesHorsgit_server\pcl_debug\sample_consensus\pcl_sample_consensus.vcxproj">
+      <Project>{0C8FDB6F-149B-329E-9C8F-860F6AE279D6}</Project>
+      <Name>pcl_sample_consensus</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SourcesHorsgit_server\pcl_debug\search\pcl_search.vcxproj">
+      <Project>{D8D58263-F8FA-32B9-981A-7734FCD0E091}</Project>
+      <Name>pcl_search</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SourcesHorsgit_server\pcl_debug\segmentation\pcl_segmentation.vcxproj">
+      <Project>{B498CF48-B3F6-3081-B156-16536B5BF65D}</Project>
+      <Name>pcl_segmentation</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SourcesHorsgit_server\pcl_debug\tools\pcl_spin_estimation.vcxproj">
+      <Project>{C34B9AEE-22F9-3DC3-A6AD-F1AFB0DD2C25}</Project>
+      <Name>pcl_spin_estimation</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SourcesHorsgit_server\pcl_debug\stereo\pcl_stereo.vcxproj">
+      <Project>{3553954C-BB26-3F50-847C-10EF702FF86E}</Project>
+      <Name>pcl_stereo</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SourcesHorsgit_server\pcl_debug\surface\pcl_surface.vcxproj">
+      <Project>{C34EF638-075C-3873-BBC5-46B5D4D32D8C}</Project>
+      <Name>pcl_surface</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SourcesHorsgit_server\pcl_debug\tracking\pcl_tracking.vcxproj">
+      <Project>{9C10FDB6-99D5-38B3-AB8F-4E6AC82A466C}</Project>
+      <Name>pcl_tracking</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SourcesHorsgit_server\pcl_debug\tools\pcl_train_linemod_template.vcxproj">
+      <Project>{144317EF-15D5-3D07-BAE4-447ED7CF7332}</Project>
+      <Name>pcl_train_linemod_template</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SourcesHorsgit_server\pcl_debug\tools\pcl_train_unary_classifier.vcxproj">
+      <Project>{81378C72-AD7F-386C-91C9-C328CDEAD920}</Project>
+      <Name>pcl_train_unary_classifier</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SourcesHorsgit_server\pcl_debug\tools\pcl_transform_from_viewpoint.vcxproj">
+      <Project>{4E1AE52B-7171-3E7A-8076-70CDFF21CC7F}</Project>
+      <Name>pcl_transform_from_viewpoint</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SourcesHorsgit_server\pcl_debug\tools\pcl_transform_point_cloud.vcxproj">
+      <Project>{DDBDB167-397E-3B88-8190-66373145CF8C}</Project>
+      <Name>pcl_transform_point_cloud</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SourcesHorsgit_server\pcl_debug\tools\pcl_unary_classifier_segment.vcxproj">
+      <Project>{497FA854-E51B-3879-BB01-5C5EBB6A9941}</Project>
+      <Name>pcl_unary_classifier_segment</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SourcesHorsgit_server\pcl_debug\tools\pcl_uniform_sampling.vcxproj">
+      <Project>{A546421B-D52E-3357-B094-31A473699C70}</Project>
+      <Name>pcl_uniform_sampling</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SourcesHorsgit_server\pcl_debug\tools\pcl_vfh_estimation.vcxproj">
+      <Project>{E5FE1EA1-6AFC-326F-BC48-24F1EF5AF44B}</Project>
+      <Name>pcl_vfh_estimation</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SourcesHorsgit_server\pcl_debug\tools\pcl_voxel_grid.vcxproj">
+      <Project>{E794DE16-D064-3F65-96A5-E3D4183BB949}</Project>
+      <Name>pcl_voxel_grid</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\SourcesHorsgit_server\pcl_debug\tools\pcl_xyz2pcd.vcxproj">
+      <Project>{F5C9DE2B-BA5A-34D8-A903-351312E92BBE}</Project>
+      <Name>pcl_xyz2pcd</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

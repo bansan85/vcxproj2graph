@@ -1,0 +1,5 @@
+Run it in the root directory:
+
+python vcxproj2graph.py tests/pcl_debug/ --path-include='C:\SourcesHorsgit_server\pcl_debug\' --output=graph.dot
+
+dot -Tsvg graph.dot -o graph.svg
